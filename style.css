@@ -1,0 +1,313 @@
+/* style.css */
+
+/* --- General Setup --- */
+body {
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  background-color: #E0F7FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-title {
+  color: #0D47A1;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  color: #0D47A1;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-top: -1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* --- Page: index.html --- */
+.worlds-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.world-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 220px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.world-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.world-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #FFAB40;
+  margin-bottom: 1rem;
+}
+
+.world-card h2 {
+  color: #0D47A1;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.footer-link {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.footer-link a {
+  color: #0D47A1;
+  text-decoration: none;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  color: #0D47A1;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* --- Page: m-ton.html --- */
+.cescom-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cescom-card {
+  background-color: white;
+  border-radius: 20px;
+  width: 180px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-bottom: 5px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cescom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cescom-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.cescom-card h2 {
+  color: #0D47A1;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.cescom-card p {
+  color: #546E7A;
+  margin: 0;
+}
+
+.cescom-card.creator { border-color: #FFAB40; }
+.cescom-card.explorer { border-color: #66BB6A; }
+.cescom-card.strategist { border-color: #42A5F5; }
+.cescom-card.communicator { border-color: #EC407A; }
+.cescom-card.maker { border-color: #78909C; }
+
+/* --- Page: category-detail.html --- */
+.content-area {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+  min-height: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #78909C;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #546E7A;
+}
+
+.content-area h3 {
+  color: #0D47A1;
+  border-bottom: 2px solid #FFAB40;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.content-area ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-area li {
+  background-color: #F4F6F7;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  color: #546E7A;
+}
+
+/* --- Chatbot Styles --- */
+#chat-fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #FFAB40;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+
+#chat-fab:hover {
+  transform: scale(1.1);
+}
+
+#chat-window {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform-origin: bottom right;
+  z-index: 1000;
+}
+
+#chat-window.hidden {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.chat-header {
+  background-color: #0D47A1;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+#close-chat-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.ai-message {
+  background-color: #F1F3F4;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.user-message {
+  background-color: #E0F7FA;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-input-form {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+#chat-input {
+  flex-grow: 1;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Kanit', sans-serif;
+}
+
+#chat-input:focus {
+  outline: none;
+}
+
+.chat-input-form button {
+  background-color: #0D47A1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+}
